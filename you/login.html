@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <div id="navbar">
+      <div>
+        <img
+          src="https://cdn-icons-png.flaticon.com/128/4889/4889159.png"
+          alt=""
+        />
+
+        <a href="login.html">
+          <img
+            src="https://secure-media.hotstarext.com/web-assets/prod/images/brand-logos/disney-hotstar-logo-dark.svg"
+            alt=""
+          />
+        </a>
+
+        <button>TV</button>
+        <button>Movie</button>
+        <button>Sports</button>
+        <button>Disoney+</button>
+        <b>KIDS</b>
+      </div>
+      <div>
+        <a href="search.html"><button >Search Movies</button></a>
+        <button>SUBSCRIBE</button>
+        <button id="ac_holder">profile</button>
+      </div>
+    </div>
+       <div id="infodiv">
+        <p>X</p>
+        <button id="info">Profile</button>
+       <a href="carousal.html"><button>Log out</button></a> 
+       </div>
+    <!-- slideshoe  -->
+
+   
+
+    <div id="carousel"></div>
+
+    <button id="sort-hl">sort-HL</button>
+    <button id="sort-lh">sort-LH</button>
+
+    <div id="movies"></div>
+  </body>
+ 
+</html>
+
+<script >
+    function carousel() {
+  images = [
+    'https://img1.hotstarext.com/image/upload/f_auto,t_web_m_1x/sources/r1/cms/prod/1331/641331-h',
+    'https://img1.hotstarext.com/image/upload/f_auto,t_web_m_1x/sources/r1/cms/prod/3476/1363476-h-4b13ab355e0e',
+    'https://img1.hotstarext.com/image/upload/f_auto,t_web_m_1x/sources/r1/cms/prod/1298/1351298-h-66706310312e',
+    'https://img1.hotstarext.com/image/upload/f_auto,t_web_m_1x/sources/r1/cms/prod/927/1360927-h-375c5733d218',
+    'https://img1.hotstarext.com/image/upload/f_auto,t_web_m_1x/sources/r1/cms/prod/6451/1376451-h-66d561b15e4e',
+  ]
+
+  imgEl = document.createElement('img')
+  imgEl.src =
+    'https://img1.hotstarext.com/image/upload/f_auto,t_web_m_1x/sources/r1/cms/prod/1331/641331-h'
+  document.getElementById('carousel').append(imgEl)
+  let i = 1
+  let stop = setInterval(function () {
+    if (i === images.length) {
+      i = 0
+    }
+    imgEl.src = images[i]
+    document.getElementById('carousel').append(imgEl)
+    i++
+  }, 2500)
+}
+carousel();
+
+
+const movies=[
+    {
+        name:"Tanhaji",
+        date: "2021/11/12",
+        image:"https://img1.hotstarext.com/image/upload/f_auto,t_web_vl_3x/sources/r1/cms/prod/7676/647676-v",
+        rating:"8.9"
+    },
+    {
+        name:"Bajarangi Bhaijaan",
+        date: "2020/11/12",
+        image:"https://img1.hotstarext.com/image/upload/f_auto,t_web_vl_3x/sources/r1/cms/prod/old_images/vertical/MOVIE/1777/1000071777/1000071777-v",
+        rating:"8.6"
+    },
+    {
+        name:"Bhool Bhulayya",
+        date: "2020/11/12",
+        image:"https://img1.hotstarext.com/image/upload/f_auto,t_web_vl_3x/sources/r1/cms/prod/8105/1118105-v-cf275eb3c3f2",
+        rating:"7.9"
+    },
+    {
+        name:"M.S.Dhoni",
+        date: "2020/11/12",
+        image:"https://img1.hotstarext.com/image/upload/f_auto,t_web_vl_3x/sources/r1/cms/prod/old_images/vertical/MOVIE/3314/1770003314/1770003314-v",
+        rating:"8.5"
+    },
+    {
+        name:"Housefull-4",
+        date: "2020/11/12",
+        image:"https://img1.hotstarext.com/image/upload/f_auto,t_web_vl_3x/sources/r1/cms/prod/3669/593669-v",
+        rating:"8.3"
+    },
+    {
+        name:"Baghi-3",
+        date: "2020/11/12",
+        image:"https://img1.hotstarext.com/image/upload/f_auto,t_web_vl_3x/sources/r1/cms/prod/6536/846536-v",
+        rating:"6.9"
+    },
+    {
+        name:"Baby",
+        date: "2020/11/12",
+        image:"https://img1.hotstarext.com/image/upload/f_auto,t_web_vl_3x/sources/r1/cms/prod/7416/957416-v",
+        rating:"8.2"
+    },
+    {
+        name:"Super-30",
+        date: "2020/11/12",
+        image:"https://img1.hotstarext.com/image/upload/f_auto,t_web_vl_3x/sources/r1/cms/prod/6828/556828-v",
+        rating:"7.5"
+    },
+    {
+        name:"Rocky",
+        date: "2020/11/12",
+        image:"https://img1.hotstarext.com/image/upload/f_auto,t_web_vl_3x/sources/r1/cms/prod/7391/1367391-v-84d5e12d4c3d",
+        rating:"7.8"
+    }
+];
+    
+    
+
+function appendMovie(el){
+    document.getElementById("movies").innerText="";
+    el.forEach(function(data){
+        
+    
+    let div= document.createElement("div");
+
+    let image= document.createElement("img");
+    image.src= data.image;
+
+    let name= document.createElement("h3");
+    name.innerText=data.name;
+
+    let date= document.createElement("p");
+    
+    date.innerHTML=data.date;
+   
+
+    let rating= document.createElement("p");
+    rating.innerText=data.rating;
+   
+    div.append(image,name,date,rating);
+    // let span=document.createElement("span");
+    // span.innerText="Releasing date:"
+    // date.append(span);
+    document.getElementById("movies").append(div);
+})
+}
+appendMovie(movies);
+
+ document.getElementById("sort-hl").addEventListener("click",sort_1);
+
+ function sort_1(el){
+
+    let data= movies;
+   data= data.sort((a,b)=>b.rating-a.rating);
+     
+     appendMovie(data);
+   
+ }
+
+ document.getElementById("sort-lh").addEventListener("click",sort_2);
+
+ function sort_2(el){
+
+    let data= movies;
+   data= data.sort((a,b)=>a.rating-b.rating);
+     
+     appendMovie(data);
+   
+ }
+
+
+ let localData=JSON.parse(localStorage.getItem("data"));
+ let index= localStorage.getItem("index");
+
+
+ let profile=document.getElementById("ac_holder");
+ profile.innerText=`Hey${localData[index].name}!`;
+
+profile.addEventListener("click",profilefun);
+
+function profilefun(){
+  let logdiv= document.getElementById("infodiv");
+  logdiv.style.display="block";
+  
+}
+
+let p= document.querySelector("#infodiv>p");
+p.addEventListener("click",function(){
+    let logdiv= document.getElementById("infodiv");
+  logdiv.style.display="none";
+})
+   
+   
+</script>

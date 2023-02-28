@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./search.css" />
+  </head>
+  <body>
+    <div id="navbar">
+      <div>
+        <img
+          src="https://cdn-icons-png.flaticon.com/128/4889/4889159.png"
+          alt=""
+        />
+
+        <a href="carousal.html">
+          <img
+            src="https://secure-media.hotstarext.com/web-assets/prod/images/brand-logos/disney-hotstar-logo-dark.svg"
+            alt=""
+          />
+        </a>
+
+        <button>TV</button>
+        <button>Movie</button>
+        <button>Sports</button>
+        <button>Disoney+</button>
+        <b>KIDS</b>
+      </div>
+      <div>
+        <div id="search_div">
+          Search Movie :
+          <input
+            oninput="debounce(searchMovie,1000)"
+            type="text"
+            id="movieName"
+          />
+        </div>
+      </div>
+    </div>
+
+    <!-- slideshoe  -->
+
+    <div id="carousel"></div>
+
+    <!-- <button onclick="searchMovie()">search movies</button> -->
+
+    <div id="movie"></div>
+    <div id="loader">
+      <img
+        id="image_loading"
+        src="https://media2.giphy.com/media/y1ZBcOGOOtlpC/giphy.gif?cid=790b76114880244d4df6c2e8d0738d5841a4c22d0d502979&rid=giphy.gif&ct=g"
+        alt=""
+      />
+    </div>
+  </body>
+</html>
+
+<script src="search.js"></script>
+<script src="carousal.js"></script>

@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <div id="navbar">
+      <div>
+        <img
+          src="https://cdn-icons-png.flaticon.com/128/4889/4889159.png"
+          alt=""
+        />
+
+        <a href="carousal.html">
+          <img
+            src="https://secure-media.hotstarext.com/web-assets/prod/images/brand-logos/disney-hotstar-logo-dark.svg"
+            alt=""
+          />
+        </a>
+
+        <button>TV</button>
+        <button>Movie</button>
+        <button>Sports</button>
+        <button>Disoney+</button>
+        <b>KIDS</b>
+      </div>
+      <div>
+        <button onclick="goTo()">Search Movies</button>
+        <button>SUBSCRIBE</button>
+        <button id="navin">LOGIN</button>
+      </div>
+    </div>
+
+    <!-- slideshoe  -->
+
+    <div id="login">
+      <h2>Log In</h2>
+      <div id="form">
+        <label for="email">Email</label>
+        <input type="email" id="email" />
+        <label for="password">Password</label>
+        <input type="Password" id="password" />
+        <button id="butin">Log In</button>
+      </div>
+
+      <p>
+        don't Have an Account,
+        <span id="not_acc">Sign in</span>
+      </p>
+    </div>
+
+    <div id="signin">
+      <h2>Sign In</h2>
+      <form id="form2" >
+        <label for="name">Name</label>
+        <input type="text" id="nameS">
+        <label for="email">Email</label>
+        <input type="emailS" id="emailS" />
+        <label for="phone">Phone</label>
+        <input type="numberS" id="phoneS" />
+        <label for="password">Password</label>
+        <input type="PasswordS" id="passwordS" />
+        <label for="confirm">confirm Passward</label>
+        <input type="textS" id="confirm" />
+        <input type="submit" id="butoff">
+      </form>
+
+      <p>
+        Already Have an Account,
+        <span id="acc">Log in</span>
+      </p>
+    </div>
+
+    <div id="carousel"></div>
+
+    <button id="sort-hl">sort-HL</button>
+    <button id="sort-lh">sort-LH</button>
+
+    
+
+    <div id="movies"></div>
+
+    <div id="loader">
+      <img
+        id="image_loading"
+        src="https://cdn-icons-gif.flaticon.com/8121/8121274.gif"
+        alt=""
+      />
+    </div>
+  </body>
+  <script  src="./carousal.js"  type="module"></script>
+</html>

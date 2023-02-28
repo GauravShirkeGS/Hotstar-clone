@@ -1,0 +1,78 @@
+
+  #navbar {
+    width: 100%;
+    height: 70px;
+    display: flex;
+    justify-content: space-between;
+    /* padding: 0px 30px; */
+    background-color: #131927;
+    color: white;
+  }
+  #navbar > div:first-child > img {
+    cursor: pointer;
+    height: 30px;
+  }
+  #navbar > div:first-child > img:nth-child(2) {
+    width: 150px;
+    cursor: pointer;
+  }
+  
+  #navbar button {
+    border: none;
+    background-color: transparent;
+    font-size: 17px;
+    color: white;
+    cursor: pointer;
+  }
+  #navbar > div {
+    /* border: 1px solid red; */
+    margin: 0px 30px;
+    width: 40%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+  #navbar input {
+    width: 280px;
+    border: none;
+    border-bottom: 1px solid;
+    color: white;
+    background-color:black;
+  }
+  #carousel {
+  }
+  #carousel img {
+    width: 100%;
+    height: 500px;
+    width: 100%;
+    /* position: fixed; */
+  }
+  
+
+#loader{
+ /* border: 1px solid red; */
+ margin: auto;
+text-align: center;
+ height: 500px;
+ display: none;
+}
+#loader>img{
+    height: 300px;
+}
+
+#movie{
+    width: 80%;
+    margin: auto;
+    margin-top: 50px;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 20px;
+    text-align: center;
+}
+#movie>div>img{
+    height: 65%;
+}
+#movie>div{
+    text-align: center;
+
+}
